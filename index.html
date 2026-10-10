@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8f6" />
+  <meta name="description" content="The Daybook is an independent journal with considered perspectives on home, food, travel, and everyday life." />
+  <title>The Daybook — Ideas for a life, well lived</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">An independent journal on living well <span>·</span> New writing every week</div>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="wordmark" href="#home" aria-label="The Daybook home"><span class="wordmark-mark" aria-hidden="true">d.</span> the daybook</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#journal">Journal</a>
+        <a href="#about">About</a>
+      </nav>
+      <span class="header-note">Thoughtful stories, published weekly</span>
+    </div>
+  </header>
+
+  <main id="home" class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow">Independent perspectives on everyday life</div>
+      <h1 id="page-title">Ideas for a life, <em>well lived.</em></h1>
+      <p>Considered stories on home, food, travel, and the details that make a life.</p>
+    </section>
+
+    <article class="featured" aria-labelledby="featured-title">
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sunlit neighborhood cafe with a warm, welcoming atmosphere" fetchpriority="high" />
+      </div>
+      <div class="feature-copy">
+        <div class="feature-label">Editor's selection</div>
+        <h2 id="featured-title">Making room for an unhurried day</h2>
+        <p>A thoughtful case for leaving one afternoon unplanned and letting the day find its own pace.</p>
+        <div class="byline"><span class="avatar" aria-hidden="true">J</span><span>By <b>Jules Bennett</b> &nbsp;·&nbsp; 6 min read</span></div>
+        <button class="text-link" type="button" data-featured-article>Read the story <span aria-hidden="true">→</span></button>
+      </div>
+    </article>
+
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="section-heading">
+        <div><h2 id="journal-title">Latest stories</h2><p>Fresh perspectives on home, food, travel, and living well.</p></div>
+        <label class="sr-only" for="post-search" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search stories</label>
+        <input class="search" id="post-search" type="search" placeholder="Search stories..." autocomplete="off" />
+      </div>
+      <div class="filters" role="group" aria-label="Filter stories by topic">
+        <button class="filter" type="button" aria-pressed="true" data-category="All">All stories</button>
+        <button class="filter" type="button" aria-pressed="false" data-category="Everyday life">Everyday life</button>
+        <button class="filter" type="button" aria-pressed="false" data-category="Food &amp; drink">Food &amp; drink</button>
+        <button class="filter" type="button" aria-pressed="false" data-category="Travel">Travel</button>
+        <button class="filter" type="button" aria-pressed="false" data-category="Culture">Culture</button>
+      </div>
+      <div class="post-grid" id="post-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="newsletter" id="about" aria-labelledby="newsletter-title">
+      <div>
+        <h2 id="newsletter-title">The weekly edition</h2>
+        <p>A considered selection of new stories, ideas, and recommendations.</p>
+        <p class="form-message" id="form-message" aria-live="polite"></p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form">
+        <label class="sr-only" for="email-address" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Your email address</label>
+        <input id="email-address" type="email" placeholder="Your email address" required autocomplete="email" />
+        <button type="submit">Subscribe <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="shell"><a class="wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">d.</span> the daybook</a><span>Independent writing on everyday life. © 2026 The Daybook</span></footer>
+
+  <dialog class="dialog" id="article-dialog" aria-labelledby="dialog-title">
+    <img class="dialog-image" id="dialog-image" src="" alt="" />
+    <div class="dialog-body">
+      <div class="dialog-topline"><span class="feature-label" id="dialog-category"></span><button class="dialog-close" type="button" aria-label="Close story">×</button></div>
+      <h2 id="dialog-title"></h2>
+      <div class="dialog-meta" id="dialog-meta"></div>
+      <div class="dialog-copy" id="dialog-copy"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
